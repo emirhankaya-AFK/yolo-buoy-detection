@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.vscode/
+.idea/
+*.pt
+*.onnx
+*.engine
+/runs/
+/dataset/
+/data/images/
+/data/labels/
+/test_images/

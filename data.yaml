@@ -1,0 +1,6 @@
+names:
+- iha
+nc: 1
+path: C:\Users\emirh\Desktop\datasets
+train: images/train
+val: images/val
