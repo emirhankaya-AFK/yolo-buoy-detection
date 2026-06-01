@@ -16,17 +16,31 @@ if os.path.exists(runs_dir):
         if os.path.exists(possible_best):
             model_path = possible_best
 
+# Eğer best.pt bulunamazsa varsayılan olarak yereldeki yolo11n.pt'yi kullan veya indir
+if not os.path.exists(model_path):
+    local_default = os.path.abspath("yolo11n.pt")
+    if os.path.exists(local_default):
+        model_path = local_default
+    else:
+        model_path = "yolo11n.pt"  # İnternetten otomatik indirir
+
 print(f"Kullanılacak model: {model_path}")
 
 try:
     model = YOLO(model_path)
 except Exception as e:
-    print(f"Model yüklenemedi. Eğitim henüz tamamlanmamış olabilir: {e}")
+    print(f"Model yüklenemedi: {e}")
     exit(1)
 
 input_dir = r"C:\Users\emirh\Desktop\yeni_resimler"
 output_dir = r"C:\Users\emirh\Desktop\auto_labeled_output"
 os.makedirs(output_dir, exist_ok=True)
+
+if not os.path.exists(input_dir) or len(os.listdir(input_dir)) == 0:
+    os.makedirs(input_dir, exist_ok=True)
+    print(f"UYARI: Etiketlenecek resimlerin yer alacağı '{input_dir}' klasörü boş veya mevcut değildi, otomatik oluşturuldu.")
+    print("Lütfen bu klasörün içerisine etiketlemek istediğiniz duba/nesne resimlerini yerleştirip betiği yeniden çalıştırın.")
+    exit(0)
 
 print("Otomatik etiketleme başlatılıyor...")
 
