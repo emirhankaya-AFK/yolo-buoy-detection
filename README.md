@@ -1,5 +1,7 @@
 # YOLO Maritime Buoy Detection & Auto-Labeling Suite (YOLO Buoy Detection)
 
+[English](README.md) | [Türkçe](README_TR.md)
+
 An end-to-end, high-performance computer vision suite designed to auto-label, verify, clean, and train YOLO (You Only Look Once) object detection models specifically for maritime environments (Unmanned Surface Vehicles - USV / İDA) to detect buoys (dubalar).
 
 ## 🚀 Features
