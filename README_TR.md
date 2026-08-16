@@ -1,5 +1,7 @@
 # YOLO İDA Duba Tespit ve Otomatik Etiketleme Sistemi (YOLO Buoy Detection)
 
+[English](README.md) | [Türkçe](README_TR.md)
+
 İnsansız Deniz Araçları (İDA / USV) için geliştirilmiş, deniz üzerindeki dubaların (buoy) tespiti amacıyla YOLO nesne algılama modellerini otomatik etiketleme, doğrulama, etiket düzeltme ve eğitme süreçlerini uçtan uca yöneten yüksek performanslı bir bilgisayarlı görü paketidir.
 
 ## 🚀 Özellikler
